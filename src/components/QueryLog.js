@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import '../main.css';
 import Navbar from './Navbar';
 
@@ -133,6 +133,8 @@ function QueryLog() {
 
     const formField4 = { must: formField3, should: formField6, offset: formField9[0], not: formField7, filter: formField8 };
 
+    const [notes, setNotes] = useState([]);
+
     const getNotes = async () => {
         //API Call
         const url = `https://test-6ed27-default-rtdb.firebaseio.com/`
@@ -146,9 +148,17 @@ function QueryLog() {
                 formField4
             }),
         });
+
         const json = await response.json();
         console.log(json);
+        setNotes(json);
+
     };
+
+
+
+
+
 
 
 
@@ -412,7 +422,7 @@ function QueryLog() {
                                 <th>Path</th>
                             </tr>
 
-                            {arr.map(el =>
+                            {notes.map(el =>
 
                                 <tr>
                                     <td>{el.index}</td>

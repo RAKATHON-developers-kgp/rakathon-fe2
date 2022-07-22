@@ -1,0 +1,111 @@
+.main {
+    /* margin: 5% 10% 0 10%; */
+    display: flex;
+    flex-wrap: wrap;
+    padding: 6% 10% 6% 10%;
+    /* background-color: rgb(242, 242, 242); */
+}
+
+.col1 {
+    width: 48%;
+    /* background-color: antiquewhite; */
+    margin: 0 1% 0 0;
+}
+
+.col2 {
+    width: 48%;
+    /* background-color: lightgreen; */
+    margin: 0 0 0 1%;
+}
+
+.log-view {
+    width: 99%;
+    margin: 3% 0 0 0;
+}
+
+.c2r2 {
+    margin: 14% 0 0 0;
+}
+
+.hrc2 {
+    margin: 15% 0 0 0;
+}
+
+.button {
+    background-color: #4CAF50;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button2 {
+    background-color: #008CBA;
+}
+
+/* Blue */
+.button3 {
+    background-color: rgb(215, 54, 54);
+}
+
+/* Red */
+.button4 {
+    background-color: #e7e7e7;
+    color: black;
+}
+
+/* Gray */
+.button5 {
+    background-color: #555555;
+}
+
+/* Black */
+
+.log-key {
+    width: 98%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.val-key {
+    width: 48%;
+    padding: 12px 20px;
+    margin: 8px 0 0 4%;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* .get-div {
+    background-color: white;
+    border: 1.5px solid #ccc;
+    padding: 0px 0 0 15px;
+} */
+
+.get-table {
+    border: 1.5px solid #ccc;
+    font-size: 1.2rem;
+    background-color: white;
+}
+
+.row-get {
+    border-right: 1.5px solid #ccc;
+    width: 1rem;
+    padding: 0 1rem 0 10px;
+
+}
+
+.row-get2 {
+    /* border-right: 1.5px solid #ccc; */
+    padding: 0 0 0 10px;
+    width: 100%;
+}

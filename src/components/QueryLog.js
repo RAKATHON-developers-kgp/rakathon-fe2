@@ -415,6 +415,7 @@ function QueryLog() {
                     <table id="customers">
                         <tbody>
                             <tr>
+                                <th> </th>
                                 <th>Index</th>
                                 <th>ID</th>
                                 <th>Timestamp</th>
@@ -422,9 +423,10 @@ function QueryLog() {
                                 <th>Path</th>
                             </tr>
 
-                            {notes.map(el =>
+                            {notes.map((el, ind) =>
 
                                 <tr>
+                                    <td>{ind + 1}</td>
                                     <td>{el.index}</td>
                                     <td>{el.id}</td>
                                     <td>{el.timestamp} </td>

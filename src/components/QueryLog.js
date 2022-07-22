@@ -137,7 +137,7 @@ function QueryLog() {
 
     const getNotes = async () => {
         //API Call
-        const url = `https://test-6ed27-default-rtdb.firebaseio.com/`
+        const url = `http://localhost:8000/query_data`
         const response = await fetch(url, {
             method: 'POST',
             headers: {

@@ -112,7 +112,7 @@ function Main(props) {
         <div>
             <Navbar />
             <div className='main'>
-                <div className='col1'>
+                <div className='col1s'>
 
                     <div>
                         {err && <h2>{err}</h2>}
@@ -142,46 +142,51 @@ function Main(props) {
 
 
                 </div>
-                <div className='col2'>
-                    <label for="lname">Enter the name to add:</label>
-                    <br />
+                <div className='col2s'>
 
-                    <form method="POST" className='form-input' onSubmit={submitData} >
-                        <input
-                            type="name"
-                            placeholder="Enter here"
-                            name="name"
-                            className='log-key'
-                            value={userData.name}
-                            onChange={postUserData}
-                        ></input>
-                        <br />
-                        <center>
-                            <button
-                                name="submit"
-                                placeholder="Add name"
-                                className="button button2"
-                                type='submit'
-                                value="submit"
-                            // onClick={submitData}
-                            // onClick={openModal}
-                            ><b>Add name</b></button>
-                        </center>
-
-                    </form>
-
-
-                    <br /><br /><br />
-                    <br />
-                    <hr className='hrc2' />
-                    <br /><br /><br />
-
-                    <div className='c2r2'>
-                        <label for="lname">Enter the name to delete:</label>
+                    <div className='col21s'>
+                        <label for="lname">Enter the name to add:</label>
                         <br />
 
-                        <Delete />
+                        <form method="POST" className='form-input' onSubmit={submitData} >
+                            <input
+                                type="name"
+                                placeholder="Enter here"
+                                name="name"
+                                className='log-key'
+                                value={userData.name}
+                                onChange={postUserData}
+                            ></input>
+                            <br />
+                            <center>
+                                <button
+                                    name="submit"
+                                    placeholder="Add name"
+                                    className="button button2"
+                                    type='submit'
+                                    value="submit"
+                                // onClick={submitData}
+                                // onClick={openModal}
+                                ><b>Add name</b></button>
+                            </center>
 
+                        </form>
+                    </div>
+
+                    <br />
+                    <br />
+                    {/* <hr className='hrc2' /> */}
+                    <br />
+
+                    <div className='col22s'>
+
+                        <div className='c2r2'>
+                            <br />
+                            <label for="lname">Enter the name to delete:</label>
+                            <br />
+
+                            <Delete />
+                        </div>
                         {/* <form method="DELETE" className='form-input' onSubmit={submitData2} >
                         <input
                             type="name"
@@ -211,7 +216,7 @@ function Main(props) {
 
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 export default Main;

@@ -8,7 +8,7 @@ function Navbar() {
             <div>
                 <ul>
                     <li><Link to='/' className="active">Query Log</Link></li>
-                    <li><Link to='./create'>Create Log</Link></li>
+                    <li><Link to='/create'>Create Log</Link></li>
                 </ul>
             </div>
         </div>

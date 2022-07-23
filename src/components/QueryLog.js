@@ -156,12 +156,6 @@ function QueryLog() {
     };
 
 
-
-
-
-
-
-
     const submit = (e) => {
         e.preventDefault();
 
@@ -209,199 +203,212 @@ function QueryLog() {
             <Navbar />
 
             <div className='main1'>
-                <div className="mainq">
+                <form onSubmit={submit}>
 
-                    <div className='col11'>
-                        <div className='col11a'>
+                    <div className='main-col'>
+                        <div className='col1'>
 
-
-                            <form onSubmit={submit}>
-
-                                <div className='main-box'>
-                                    {formFields.map((form, index) => {
-                                        return (
-                                            <div key={index} className='must-box' >
-                                                <div className='m1'>Logs must (and) include:</div>
-                                                <div className='m2'>
-                                                    <input
-                                                        name='name'
-                                                        className='input1'
-                                                        placeholder='Enter single keyword'
-                                                        onChange={event => handleFormChange(event, index)}
-                                                        value={form.name}
-                                                    />
-                                                </div>
-
-                                                <div className='m3'>
-                                                    <button className='button1' onClick={() => removeFields(index)}>Remove</button>
-                                                </div>
-                                            </div>
-                                        )
-                                    })}
-
-
-                                    <div className='btna' >
-                                        <button className='button2' onClick={addFields}>Add More</button>
+                            <div className='main-box'>
+                                <center>
+                                    <div className='head-box'>
+                                        MUST
                                     </div>
-                                    <br />
-                                    <br />
-                                </div>
+                                </center>
 
-                                <div className='main-box2'>
-                                    {formShould.map((form, index) => {
-                                        return (
-                                            <div key={index} className='must-box' >
-                                                <div className='m1'>Logs should (or) include:</div>
-                                                <div className='m2'>
-                                                    <input
-                                                        name='name'
-                                                        placeholder='Enter single keyword'
-                                                        className='input1'
-                                                        onChange={event => handleFormChange2(event, index)}
-                                                        value={form.name}
-                                                    />
-                                                </div>
-
-                                                <div className='m3'>
-                                                    <button className='button1' onClick={() => removeFields2(index)}>Remove</button>
-                                                </div>
+                                {formFields.map((form, index) => {
+                                    return (
+                                        <div key={index} className='must-box' >
+                                            <div className='m1'>Logs must (and) include:</div>
+                                            <div className='m2'>
+                                                <input
+                                                    name='name'
+                                                    className='input1'
+                                                    placeholder='Enter single keyword'
+                                                    onChange={event => handleFormChange(event, index)}
+                                                    value={form.name}
+                                                />
                                             </div>
-                                        )
-                                    })}
 
-                                    <div className='btnb'>
-                                        <button className='button2' onClick={addFields2}>Add More</button>
+                                            <div className='m3'>
+                                                <button className='button1' onClick={() => removeFields(index)}>-</button>
+                                            </div>
+                                        </div>
+                                    )
+                                })}
+
+
+                                <div className='btna' >
+                                    <button className='btn4' onClick={addFields}>+</button>
+                                </div>
+                                <br />
+                                <br />
+                            </div>
+
+
+
+                            <div className='main-box'>
+
+                                <center>
+                                    <div className='head-box'>
+                                        SHOULD
                                     </div>
-                                    <br />
-                                    <br />
-                                </div>
-
-
-                                <div className='main-box2'>
-                                    {formNot.map((form, index) => {
-                                        return (
-                                            <div key={index} className='must-box'>
-                                                <div className='m1'>Logs must NOT include:</div>
-                                                <div className='m2'>
-                                                    <input
-                                                        name='name'
-                                                        placeholder='Enter single keyword'
-                                                        className='input1'
-                                                        onChange={event => handleFormChange3(event, index)}
-                                                        value={form.name}
-                                                    />
-                                                </div>
-                                                <button className='button1' onClick={() => removeFields3(index)}>Remove</button>
-                                                {/* <button onClick={addFields3}>Add More Not</button> */}
+                                </center>
+                                {formShould.map((form, index) => {
+                                    return (
+                                        <div key={index} className='must-box' >
+                                            <div className='m1'>Logs should (or) include:</div>
+                                            <div className='m2'>
+                                                <input
+                                                    name='name'
+                                                    placeholder='Enter single keyword'
+                                                    className='input1'
+                                                    onChange={event => handleFormChange2(event, index)}
+                                                    value={form.name}
+                                                />
                                             </div>
-                                        )
-                                    })}
 
-                                    <div className='btnc'>
-                                        <button className='button2' onClick={addFields3}>Add More</button>
-                                    </div>
-                                    <br />
-                                    <br />
-                                </div>
-
-                                <div className='main-box2'>
-                                    {formLimit.map((form, index) => {
-                                        return (
-                                            <div key={index} className='must-box'>
-                                                <div className='m1'>Number of logs to show:</div>
-                                                <div className='m2'>
-                                                    <input
-                                                        name='name'
-                                                        type='number'
-                                                        className='input1'
-                                                        placeholder='No. of logs (Enter number)'
-                                                        onChange={event => handleFormChange5(event, index)}
-                                                        value={form.name}
-                                                    />
-                                                </div>
+                                            <div className='m3'>
+                                                <button className='button1' onClick={() => removeFields2(index)}>-</button>
                                             </div>
-                                        )
-                                    })}
+                                        </div>
+                                    )
+                                })}
 
-                                    <br />
+                                <div className='btna'>
+                                    <button className='btn4' onClick={addFields2}>+</button>
                                 </div>
+                                <br />
+                                <br />
+                            </div>
 
-                                <div className='main-box3'>
-                                    {formLte.map((form, index) => {
-                                        return (
-                                            <div key={index} className='must-box'>
-
-                                                <div className='m1'>Filter:</div>
-                                                <div className='m2'>
-                                                    <select
-                                                        className='input1'
-                                                        onChange={(e) => (handleshowhide(e))}
-                                                    >
-                                                        <option>Select</option>
-                                                        <option value='aa'>Time Stamp</option>
-                                                    </select>
-                                                </div>
-                                                <br />
-                                                {
-                                                    showhide === 'aa' && (
-                                                        <div className='must-box'>
-
-                                                            <div className='f1'>Initial time stamp:</div>
-                                                            <input
-                                                                name='lte'
-                                                                type='number'
-                                                                className='input2'
-                                                                placeholder='Log initiating time'
-                                                                onChange={event => handleFormChange4(event, index)}
-                                                                value={form.lte}
-                                                            />
-                                                            <div className='f2'>Initial time stamp:</div>
-                                                            <input
-                                                                name='gte'
-                                                                type='number'
-                                                                className='input3'
-                                                                placeholder='Log closing time'
-                                                                onChange={event => handleFormChange4(event, index)}
-                                                                value={form.gte}
-                                                            />
-
-                                                        </div>
-                                                    )
-                                                }
-
+                            <div className='main-box2'>
+                                {formLimit.map((form, index) => {
+                                    return (
+                                        <div key={index} className='must-box'>
+                                            <div className='m1'>Number of logs to show:</div>
+                                            <div className='m2'>
+                                                <input
+                                                    name='name'
+                                                    type='number'
+                                                    className='input1'
+                                                    placeholder='No. of logs (Enter number)'
+                                                    onChange={event => handleFormChange5(event, index)}
+                                                    value={form.name}
+                                                />
                                             </div>
-                                        )
-                                    })}
-                                    <br />
-                                </div>
+                                        </div>
+                                    )
+                                })}
 
-                            </form>
+                            </div>
 
                         </div>
+
+
+                        <div className='col2'>
+
+                            <div className='main-box'>
+
+                                <center>
+                                    <div className='head-box'>
+                                        MUST NOT
+                                    </div>
+                                </center>
+
+                                {formNot.map((form, index) => {
+                                    return (
+                                        <div key={index} className='must-box'>
+                                            <div className='m1'>Logs must NOT include:</div>
+                                            <div className='m2'>
+                                                <input
+                                                    name='name'
+                                                    placeholder='Enter single keyword'
+                                                    className='input1'
+                                                    onChange={event => handleFormChange3(event, index)}
+                                                    value={form.name}
+                                                />
+                                            </div>
+                                            <button className='button1' onClick={() => removeFields3(index)}>-</button>
+                                            {/* <button onClick={addFields3}>Add More Not</button> */}
+                                        </div>
+                                    )
+                                })}
+
+                                <div className='btna'>
+                                    <button className='btn4' onClick={addFields3}>+</button>
+                                </div>
+                                <br />
+                                <br />
+                            </div>
+
+
+                            <div className='main-box'>
+
+                                <center>
+                                    <div className='head-box'>
+                                        FILTER
+                                    </div>
+                                </center>
+                                {formLte.map((form, index) => {
+                                    return (
+                                        <div key={index} className='must-box'>
+
+                                            <div className='m1'>Filter:</div>
+                                            <div className='m2'>
+                                                <select
+                                                    className='input1'
+                                                    onChange={(e) => (handleshowhide(e))}
+                                                >
+                                                    <option>Select</option>
+                                                    <option value='aa'>Time Stamp</option>
+                                                </select>
+                                            </div>
+                                            <br />
+                                            {
+                                                showhide === 'aa' && (
+                                                    <div className='filter-box'>
+
+                                                        <div className='f1'>Initial time stamp:</div>
+                                                        <input
+                                                            name='lte'
+                                                            type='number'
+                                                            className='input2'
+                                                            placeholder='Log initiating time'
+                                                            onChange={event => handleFormChange4(event, index)}
+                                                            value={form.lte}
+                                                        />
+                                                        <div className='f2'>Initial time stamp:</div>
+                                                        <input
+                                                            name='gte'
+                                                            type='number'
+                                                            className='input3'
+                                                            placeholder='Log closing time'
+                                                            onChange={event => handleFormChange4(event, index)}
+                                                            value={form.gte}
+                                                        />
+
+                                                    </div>
+                                                )
+                                            }
+
+                                        </div>
+                                    )
+                                })}
+                                <br />
+                            </div>
+
+                        </div>
+
                     </div>
 
-                    <div className='col12'>
+                </form>
 
-                        {/* <div className='btna' >
-            <button className='button2' onClick={addFields}>Add More (Must)</button>
-          </div> */}
 
-                        {/* <div className='btnb'>
-            <button className='button2' onClick={addFields2}>Add More (Should)</button>
-          </div> */}
+                <br />
 
-                        {/* <div className='btnc'>
-            <button className='button2' onClick={addFields3}>Add More (Not)</button>
-          </div> */}
-
-                        <br />
-                    </div>
-
-                    <br />
-                </div>
                 <center>
                     <div className='sub-btn'>
-                        <button className='button3' onClick={submit}>Submit</button>
+                        <button className='but33' onClick={submit}>QUERY DATA</button>
                     </div>
                 </center>
                 <br />
@@ -412,32 +419,35 @@ function QueryLog() {
                 <center>
                     <h1>Query Results</h1>
 
-                    <table id="customers">
-                        <tbody>
-                            <tr>
-                                <th> </th>
-                                <th>Index</th>
-                                <th>ID</th>
-                                <th>Timestamp</th>
-                                <th>Log</th>
-                                <th>Path</th>
-                            </tr>
+                    <div className='q-table'>
 
-                            {notes.map((el, ind) =>
-
+                        <table id="customers">
+                            <tbody>
                                 <tr>
-                                    <td>{ind + 1}</td>
-                                    <td>{el.index}</td>
-                                    <td>{el.id}</td>
-                                    <td>{el.timestamp} </td>
-                                    <td>{el.log} </td>
-                                    <td>{el.path} </td>
+                                    <th> </th>
+                                    <th>Index</th>
+                                    <th>ID</th>
+                                    <th>Timestamp</th>
+                                    <th>Log</th>
+                                    <th>Path</th>
                                 </tr>
 
-                            )
-                            }
-                        </tbody>
-                    </table>
+                                {arr.map((el, ind) =>
+
+                                    <tr>
+                                        <td>{ind + 1}</td>
+                                        <td>{el.index}</td>
+                                        <td>{el.id}</td>
+                                        <td>{el.timestamp} </td>
+                                        <td>{el.log} </td>
+                                        <td>{el.path} </td>
+                                    </tr>
+
+                                )
+                                }
+                            </tbody>
+                        </table>
+                    </div>
                 </center>
 
 

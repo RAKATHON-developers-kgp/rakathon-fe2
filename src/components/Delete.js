@@ -44,7 +44,7 @@ function Delete() {
 
 
     return (
-        <div>
+        <div className='delbt'>
 
             <form method="DELETE" className='form-input' onSubmit={submitData} >
                 <input

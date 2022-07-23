@@ -432,7 +432,7 @@ function QueryLog() {
                                     <th>Path</th>
                                 </tr>
 
-                                {arr.map((el, ind) =>
+                                {notes.map((el, ind) =>
 
                                     <tr>
                                         <td>{ind + 1}</td>

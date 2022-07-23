@@ -68,10 +68,10 @@ body {
 
 
 .m1 {
-    width: 40%;
-    font-size: 19px;
+    width: 48%;
+    font-size: 18px;
     padding: 0% 0 0 0;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .m2 {
@@ -83,7 +83,7 @@ body {
 } */
 
 .btna {
-    margin: 0% 13.3% 0% 0;
+    margin: 0% 3% 0% 0;
     float: right;
 }
 
@@ -223,7 +223,7 @@ body {
 
 .sub-btn {
     position: absolute;
-    width: 42rem;
+    width: 32rem;
     top: 78.5%;
     right: 11%;
     margin: 0% 0 0 0%;
